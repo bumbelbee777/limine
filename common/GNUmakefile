@@ -56,6 +56,7 @@ override INTERNAL_CFLAGS := \
 	-I'$(call SHESCAPE,$(BUILDDIR))/..' \
 	-I. \
 	-I.. \
+	-I../stivale \
 	-I'$(call SHESCAPE,$(BUILDDIR))/tinf'
 
 ifeq ($(TARGET), bios)

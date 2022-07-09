@@ -1,4 +1,4 @@
-ENTRY(limine_main)
+ENTRY(stivale_main)
 
 PHDRS
 {
@@ -22,6 +22,14 @@ SECTIONS
     .limine_reqs : {
         KEEP(*(.limine_reqs))
         QUAD(0)
+    } :rodata
+
+   .stivalehdr : {
+        KEEP(*(.stivalehdr))
+    } :rodata
+
+    .stivale2hdr : {
+        KEEP(*(.stivale2hdr))
     } :rodata
 
     .rodata : {

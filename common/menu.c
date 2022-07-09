@@ -19,6 +19,7 @@
 #include <protos/chainload.h>
 #include <protos/multiboot1.h>
 #include <protos/multiboot2.h>
+#include <protos/stivale2.h>
 #include <protos/limine.h>
 
 static char *menu_branding = NULL;
@@ -918,9 +919,7 @@ noreturn void boot(char *config) {
     }
 
     if (!strcmp(proto, "stivale1") || !strcmp(proto, "stivale") || !strcmp(proto, "stivale2")) {
-        print("The stivale and stivale2 protocols are no longer supported as of Limine 4.x\n");
-        print("Please notify kernel maintainers to move to the Limine boot protocol or\n");
-        print("roll back to Limine 3.x.\n\n");
+        stivale_load(config, cmdline);
     } else if (!strcmp(proto, "limine")) {
         limine_load(config, cmdline);
     } else if (!strcmp(proto, "linux")) {
