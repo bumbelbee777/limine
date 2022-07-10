@@ -190,7 +190,7 @@ bool stivale2_load(char *config, char *cmdline) {
                                STIVALE2_MMAP_KERNEL_AND_MODULES, kaslr, false,
                                want_pmrs ? &ranges : NULL,
                                want_pmrs ? &ranges_count : NULL,
-                               want_fully_virtual, &physical_base, &virtual_base,
+                               true, &physical_base, &virtual_base,
                                NULL))
                     panic(true, "stivale2: ELF64 load failure");
 
