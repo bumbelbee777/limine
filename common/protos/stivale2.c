@@ -191,7 +191,7 @@ bool stivale2_load(char *config, char *cmdline) {
                                want_pmrs ? &ranges : NULL,
                                want_pmrs ? &ranges_count : NULL,
                                want_fully_virtual, &physical_base, &virtual_base,
-                               NULL, NULL))
+                               NULL))
                     panic(true, "stivale2: ELF64 load failure");
 
                 if (want_fully_virtual) {
