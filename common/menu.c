@@ -19,6 +19,7 @@
 #include <protos/chainload.h>
 #include <protos/multiboot1.h>
 #include <protos/multiboot2.h>
+#include <protos/stivale.h>
 #include <protos/stivale2.h>
 #include <protos/limine.h>
 
