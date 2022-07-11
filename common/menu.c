@@ -918,8 +918,10 @@ noreturn void boot(char *config) {
         panic(true, "Boot protocol not specified for this entry");
     }
 
-    if (!strcmp(proto, "stivale1") || !strcmp(proto, "stivale") || !strcmp(proto, "stivale2")) {
+    if (!strcmp(proto, "stivale1") || !strcmp(proto, "stivale")) {
         stivale_load(config, cmdline);
+    } else if (!strcmp(proto, "stivale2")) {
+        stivale2_load(config, cmdline);
     } else if (!strcmp(proto, "limine")) {
         limine_load(config, cmdline);
     } else if (!strcmp(proto, "linux")) {
